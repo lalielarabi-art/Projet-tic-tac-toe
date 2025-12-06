@@ -1,1 +1,1 @@
-# Projet-tic-tac-the
+# Projet-tic-tac-toe
