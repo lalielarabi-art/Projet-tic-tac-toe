@@ -17,9 +17,10 @@ char plateau[3][3]={
     
 int box {};
     
-draw_game_board(plateau);
-    
-while (!sby_won(plateau)){
+draw_game_board(plateau); 
+
+for(int i{0}; i<5; ++i){
+
     turn(player1, plateau);
 
     if (sby_won(plateau)){
@@ -34,8 +35,13 @@ while (!sby_won(plateau)){
       std::cout<<"Le joueur "<<player2.name<<" a gagné!"<<std::endl;
 
       break;
-    }
-  }   
     
+    }
+
+  }
+  if (!sby_won(plateau)){
+    std::cout<<"La partie est terminé, le match est nul."<<std::endl;
+  }
+
 return 0;
 }
