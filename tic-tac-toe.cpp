@@ -19,7 +19,7 @@ int box {};
     
 draw_game_board(plateau); 
 
-for(int i{0}; i<5; ++i){
+for(int i{0}; i<4; ++i){
 
     turn(player1, plateau);
 
@@ -37,9 +37,12 @@ for(int i{0}; i<5; ++i){
       break;
     
     }
-
+}
+if (sby_won(plateau)){
+    std::cout<<"Le joueur "<<player1.name<<" a gagné!"<<std::endl;
   }
-  if (!sby_won(plateau)){
+
+if (!sby_won(plateau)){
     std::cout<<"La partie est terminé, le match est nul."<<std::endl;
   }
 
