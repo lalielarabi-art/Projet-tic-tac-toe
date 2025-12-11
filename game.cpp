@@ -29,7 +29,7 @@ void turn(Player& player, char plateau[][3]){
 
 void ia_turn(Player& ia, char plateau[][3]){
 
-    std::cout<<"Le joueur "<<ia.name<<" doit jouer."<<std::endl;
+    std::cout<<"Le joueur "<<ia.name<<" a joué."<<std::endl;
 
     std::vector<int> empty_boxes;
     for (int i{0}; i<3;++i){
