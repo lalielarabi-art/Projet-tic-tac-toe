@@ -49,9 +49,11 @@ if (game_mode==1){
         
         }
     }
+   if (!sby_won(plateau)){
+    turn(player1, plateau);
     if (sby_won(plateau)){
-        std::cout<<"Le joueur "<<player1.name<<" a gagné!"<<std::endl;
-      }
+      std::cout<<"Le joueur "<<player1.name<<" a gagné!"<<std::endl;
+    }
     
     if (!sby_won(plateau)){
         std::cout<<"La partie est terminé, le match est nul."<<std::endl;
@@ -90,10 +92,11 @@ else{
 
   }
     
-  turn(player, plateau);
-
-  if (sby_won(plateau)){
-    std::cout<<"Le joueur "<<player.name<<" a gagné!"<<std::endl;
+  if (!sby_won(plateau)){
+    turn(player, plateau);
+    if (sby_won(plateau)){
+      std::cout<<"Le joueur "<<player.name<<" a gagné!"<<std::endl;
+    }
   }
 
   if (!sby_won(plateau)){
