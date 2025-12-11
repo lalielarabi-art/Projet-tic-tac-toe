@@ -19,6 +19,19 @@ void turn(Player& player, char plateau[][3]){
       draw_game_board(plateau);
     }
 
+void ia_turn(Player& ia, char plateau[][3]){
+
+    std::cout<<"Le joueur "<<ia.name<<" doit jouer."<<std::endl;
+
+    std::vector<int> empty_boxes;
+    for (int i{0}; i<3;++i){
+        for(int j{0}; j<3; ++j){
+            if (plateau[i][j]>= '1' and plateau[i][j]<= '9' ){
+                empty_boxes.push_back(3*i + 1 + j);
+            }
+        }
+    }
+
     bool sby_won(char plateau[][3]){
 
      /*/Verif des colonnes*/
