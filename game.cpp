@@ -14,6 +14,14 @@ void turn(Player& player, char plateau[][3]){
       int lign {(box-1)/3};
       int column {(box-1)%3};
 
+      while (!(plateau[lign][column]>='1' and plateau[lign][column]<='9'))
+    {
+        std::cout<<"Cette case est déjà prise. Veuillez en choisir une autre."<<std::endl;
+        std::cin>>box;
+        lign = {(box-1)/3};
+        column = {(box-1)%3};
+    }
+
       plateau[lign][column]=player.symbol;
 
       draw_game_board(plateau);
