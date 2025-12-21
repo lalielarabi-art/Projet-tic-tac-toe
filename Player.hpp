@@ -8,3 +8,4 @@ struct Player
 };
 
 Player create_player();
+
