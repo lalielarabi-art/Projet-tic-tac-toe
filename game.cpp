@@ -20,8 +20,8 @@ void turn(Player& player, char plateau[][3]){
     {
         std::cout<<"Cette case est déjà prise. Veuillez en choisir une autre."<<std::endl;
         std::cin>>box;
-        lign = {(box-1)/3};
-        column = {(box-1)%3};
+        lign = (box-1)/3;
+        column = (box-1)%3;
     }
 
     plateau[lign][column]=player.symbol;
