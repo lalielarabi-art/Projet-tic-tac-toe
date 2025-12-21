@@ -82,7 +82,7 @@ else{
       break;
     }
 
-    ia_turn(ia, plateau);
+    ia_turn(ia, player, plateau);
 
     if (sby_won(plateau)){
       std::cout<<"Le joueur "<<ia.name<<" a gagné!"<<std::endl;
