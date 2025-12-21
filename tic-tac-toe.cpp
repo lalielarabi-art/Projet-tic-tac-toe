@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Player.hpp"
 #include "board.hpp"
-
+#include "game.hpp"
 
 int main() {
 
